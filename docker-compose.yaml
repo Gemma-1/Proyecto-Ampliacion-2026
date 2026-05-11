@@ -34,7 +34,7 @@ services:
     working_dir: /repo
     entrypoint: ["sh"]
     command: 
-      -c "git config --global --add safe.directory /repo && ([ -d .git ] || git init && git remote add origin https://github.com/Gemma-1/Proyecto-Ampliacion-2026.git) && git fetch origin && git checkout origin/main -- index.php"
+      -c "git config --global --add safe.directory /repo && ([ -d .git ] || git init && git remote add origin https://github.com/Gemma-1/Proyecto-Ampliacion-2026.git) && git fetch origin && git checkout origin/main -- index.php && rm -rf .git"
 
 volumes:
   db_data:
